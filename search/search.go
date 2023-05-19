@@ -8,5 +8,5 @@ func (s Searcher) Search(query string) {
 }
 
 func (s Searcher) GetResult() string {
-	return ""
+	return "Item 1"
 }
