@@ -1,16 +1,17 @@
 package search_test
 
 import (
+	"bookswap-tdd-go/search"
 	"github.com/stretchr/testify/require"
 	"testing"
 )
 
 func TestSearch_FindOneMatchTest(t *testing.T) {
 	t.Run("success match found", func(t *testing.T) {
-		searcher := Searcher{}
+		searcher := search.Searcher{}
 
-		res := searcher.search("item")
+		searcher.Search("item")
 
-		require.Equal(t, "Item 1", res)
+		require.Equal(t, "Item 1", searcher.GetResult())
 	})
 }
