@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7621a4f-1d85-4661-a0b1-4a5a316dc3bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/search_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
     "node.js.selected.package.eslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search">
+  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search">
     <configuration name="TestSearch_FindOneMatchTest in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -103,6 +102,18 @@
       <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qanother_match_found\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bookswap-tdd-go" />
+      <working_directory value="$PROJECT_DIR$/search" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="bookswap-tdd-go/search" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qno_match_found\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -117,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" />

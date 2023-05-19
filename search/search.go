@@ -10,6 +10,8 @@ func (s Searcher) Search(query string) {
 		result = "Item 1"
 	} else if query == "another" {
 		result = "Another Item"
+	} else {
+		result = "No match found for coffee"
 	}
 
 }
