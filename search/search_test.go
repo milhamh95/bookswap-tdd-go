@@ -38,4 +38,12 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		require.Equal(t, "Error: bad query", searcher.GetResult())
 	})
+
+	t.Run("short query", func(t *testing.T) {
+		searcher := search.Searcher{}
+
+		searcher.Search("abc")
+
+		require.Equal(t, "Error: bad query", searcher.GetResult())
+	})
 }
