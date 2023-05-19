@@ -8,7 +8,7 @@ type Searcher struct {
 var result = "Item 1"
 
 func (s Searcher) Search(query string) {
-	if query == "" {
+	if query == "" || query == "abc" {
 		result = "Error: bad query"
 		return
 	}
