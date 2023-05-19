@@ -1,5 +1,7 @@
 package search
 
+import "fmt"
+
 type Searcher struct {
 }
 
@@ -11,7 +13,7 @@ func (s Searcher) Search(query string) {
 	} else if query == "another" {
 		result = "Another Item"
 	} else {
-		result = "No match found for coffee"
+		result = fmt.Sprintf("No match found for %s", query)
 	}
 
 }
