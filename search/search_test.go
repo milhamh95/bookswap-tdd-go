@@ -30,4 +30,12 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		require.Equal(t, "No match found for coffee", searcher.GetResult())
 	})
+
+	t.Run("empty query", func(t *testing.T) {
+		searcher := search.Searcher{}
+
+		searcher.Search("")
+
+		require.Equal(t, "Error: bad query", searcher.GetResult())
+	})
 }
