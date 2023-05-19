@@ -22,6 +22,7 @@ func (s Searcher) Search(query string) {
 		searchStateLiveData = "Another Item"
 	} else {
 		result = fmt.Sprintf("No match found for %s", query)
+		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
 	}
 
 }
@@ -32,6 +33,6 @@ func (s Searcher) GetResult() string {
 
 func (s Searcher) ResultState() SearchState {
 	return SearchState{
-		Match: searchStateLiveData,
+		Result: searchStateLiveData,
 	}
 }
