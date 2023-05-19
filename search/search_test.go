@@ -14,4 +14,12 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		require.Equal(t, "Item 1", searcher.GetResult())
 	})
+
+	t.Run("another match found", func(t *testing.T) {
+		searcher := search.Searcher{}
+
+		searcher.Search("another")
+
+		require.Equal(t, "Another Item", searcher.GetResult())
+	})
 }
