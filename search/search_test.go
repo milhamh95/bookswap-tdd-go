@@ -16,7 +16,6 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 	})
 
 	t.Run("another match found", func(t *testing.T) {
-		t.Skip("refactoring")
 		searcher := search.Searcher{}
 
 		searcher.Search("another")

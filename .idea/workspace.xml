@@ -78,7 +78,7 @@
     "node.js.selected.package.eslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search">
+  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search">
     <configuration name="TestSearch_FindOneMatchTest in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -117,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" />
       </list>
     </recent_temporary>
   </component>
