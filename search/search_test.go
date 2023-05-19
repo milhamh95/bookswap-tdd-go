@@ -12,8 +12,7 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		searcher.Search("item")
 
-		require.Equal(t, "Item 1", searcher.GetResult())
-		require.Equal(t, SearchState.Match("Item 1"), searcher.ResultState())
+		require.Equal(t, search.SearchState{Match: "Item 1"}, searcher.ResultState())
 	})
 
 	t.Run("another match found", func(t *testing.T) {
@@ -21,7 +20,7 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		searcher.Search("another")
 
-		require.Equal(t, "Another Item", searcher.GetResult())
+		require.Equal(t, search.SearchState{Match: "Another Item"}, searcher.ResultState())
 	})
 
 	t.Run("no match found", func(t *testing.T) {
@@ -30,6 +29,7 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 		searcher.Search("coffee")
 
 		require.Equal(t, "No match found for coffee", searcher.GetResult())
+		require.Equal(t, search.SearchState{NoMatchFor: "coffee"}, searcher.ResultState())
 	})
 
 	t.Run("empty query", func(t *testing.T) {
