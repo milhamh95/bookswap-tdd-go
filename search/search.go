@@ -3,10 +3,12 @@ package search
 type Searcher struct {
 }
 
+var result = "Item 1"
+
 func (s Searcher) Search(query string) {
-	return
+	result = "Item 1"
 }
 
 func (s Searcher) GetResult() string {
-	return "Item 1"
+	return result
 }
