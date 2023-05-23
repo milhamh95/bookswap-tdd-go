@@ -2,18 +2,17 @@ package search
 
 import (
 	"fmt"
-	"strings"
 )
 
 type Searcher struct {
+	validator QueryValidator
 }
 
 var result = "Item 1"
 var searchStateLiveData = ""
 
 func (s Searcher) Search(query string) {
-	isValid := len(strings.TrimSpace(query)) > 3
-	if !isValid {
+	if s.validator.Validate(query) {
 		result = "Error: bad query"
 		searchStateLiveData = "Error: bad query"
 		return
