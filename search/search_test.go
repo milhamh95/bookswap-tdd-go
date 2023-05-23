@@ -7,9 +7,10 @@ import (
 )
 
 func TestSearch_FindOneMatchTest(t *testing.T) {
+	minQueryLength := 3
 	searcher := search.Searcher{
 		Validator: search.QueryValidator{
-			MinQueryLength: 3,
+			MinQueryLength: minQueryLength,
 		},
 	}
 
