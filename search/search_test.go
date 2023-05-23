@@ -35,7 +35,6 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 	t.Run("empty query", func(t *testing.T) {
 		searcher.Search("")
 
-		require.Equal(t, "Error: bad query", searcher.GetResult())
 		require.Equal(t, search.SearchState{Result: "Error: bad query"}, searcher.ResultState())
 	})
 
@@ -43,7 +42,6 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 
 		searcher.Search("abc")
 
-		require.Equal(t, "Error: bad query", searcher.GetResult())
 		require.Equal(t, search.SearchState{Result: "Error: bad query"}, searcher.ResultState())
 	})
 

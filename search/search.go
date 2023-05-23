@@ -8,31 +8,28 @@ type Searcher struct {
 	Validator QueryValidator
 }
 
-var result = "Item 1"
 var searchStateLiveData = ""
 
 func (s Searcher) Search(query string) {
 	if !s.Validator.Validate(query) {
-		result = "Error: bad query"
 		searchStateLiveData = "Error: bad query"
 		return
 	}
 
-	if query == "item" {
-		result = "Item 1"
-		searchStateLiveData = "Item 1"
-	} else if query == "another" {
-		result = "Another Item"
-		searchStateLiveData = "Another Item"
+	availableQueries := map[string]string{
+		"item":    "Item 1",
+		"another": "Another Item",
+	}
+
+	if query == "item" || query == "another" {
+		v, ok := availableQueries[query]
+		if ok {
+			searchStateLiveData = v
+		}
 	} else {
-		result = fmt.Sprintf("No match found for %s", query)
 		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
 	}
 
-}
-
-func (s Searcher) GetResult() string {
-	return result
 }
 
 func (s Searcher) ResultState() SearchState {
