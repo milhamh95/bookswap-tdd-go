@@ -12,7 +12,7 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 		Validator: search.QueryValidator{
 			MinQueryLength: minQueryLength,
 		},
-		Repository: search.Repository{},
+		Repository: search.NewRepository(),
 	}
 
 	t.Run("success match found", func(t *testing.T) {
