@@ -8,11 +8,15 @@ import (
 
 func TestSearch_FindOneMatchTest(t *testing.T) {
 	minQueryLength := 3
+	availableQueries := map[string]string{
+		"item":    "Item 1",
+		"another": "Another Item",
+	}
 	searcher := search.Searcher{
 		Validator: search.QueryValidator{
 			MinQueryLength: minQueryLength,
 		},
-		Repository: search.NewRepository(),
+		Repository: search.NewRepository(availableQueries),
 	}
 
 	t.Run("success match found", func(t *testing.T) {

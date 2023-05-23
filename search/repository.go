@@ -6,12 +6,9 @@ type Repository struct {
 	AvailableQueries map[string]string
 }
 
-func NewRepository() Repository {
+func NewRepository(availableQueries map[string]string) Repository {
 	return Repository{
-		AvailableQueries: map[string]string{
-			"item":    "Item 1",
-			"another": "Another Item",
-		},
+		AvailableQueries: availableQueries,
 	}
 }
 
