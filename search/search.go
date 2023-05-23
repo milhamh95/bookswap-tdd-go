@@ -3,7 +3,8 @@ package search
 import "fmt"
 
 type Searcher struct {
-	Validator QueryValidator
+	Validator  QueryValidator
+	Repository Repository
 }
 
 var searchStateLiveData = ""
@@ -14,7 +15,8 @@ func (s Searcher) Search(query string) {
 		return
 	}
 
-	s.performSearch(query)
+	item := s.Repository.PerformSearch(query)
+	searchStateLiveData = item
 }
 
 func (s Searcher) performSearch(query string) {
@@ -26,6 +28,7 @@ func (s Searcher) performSearch(query string) {
 	item, ok := availableQueries[query]
 	if !ok {
 		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
+		return
 	}
 
 	searchStateLiveData = item
