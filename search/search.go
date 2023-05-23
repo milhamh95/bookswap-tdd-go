@@ -1,8 +1,6 @@
 package search
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Searcher struct {
 	Validator QueryValidator
@@ -21,15 +19,13 @@ func (s Searcher) Search(query string) {
 		"another": "Another Item",
 	}
 
-	if query == "item" || query == "another" {
-		v, ok := availableQueries[query]
-		if ok {
-			searchStateLiveData = v
-		}
-	} else {
+	v, ok := availableQueries[query]
+	if !ok {
 		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
+		return
 	}
 
+	searchStateLiveData = v
 }
 
 func (s Searcher) ResultState() SearchState {
