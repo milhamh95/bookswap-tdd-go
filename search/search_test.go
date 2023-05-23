@@ -7,7 +7,9 @@ import (
 )
 
 func TestSearch_FindOneMatchTest(t *testing.T) {
-	searcher := search.Searcher{}
+	searcher := search.Searcher{
+		Validator: search.QueryValidator{},
+	}
 
 	t.Run("success match found", func(t *testing.T) {
 		searcher.Search("item")

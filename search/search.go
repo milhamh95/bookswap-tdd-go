@@ -5,14 +5,14 @@ import (
 )
 
 type Searcher struct {
-	validator QueryValidator
+	Validator QueryValidator
 }
 
 var result = "Item 1"
 var searchStateLiveData = ""
 
 func (s Searcher) Search(query string) {
-	if s.validator.Validate(query) {
+	if !s.Validator.Validate(query) {
 		result = "Error: bad query"
 		searchStateLiveData = "Error: bad query"
 		return
