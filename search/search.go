@@ -1,6 +1,9 @@
 package search
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Searcher struct {
 }
@@ -9,8 +12,10 @@ var result = "Item 1"
 var searchStateLiveData = ""
 
 func (s Searcher) Search(query string) {
-	if query == "" || query == "abc" {
+	isValid := len(strings.TrimSpace(query)) > 3
+	if !isValid {
 		result = "Error: bad query"
+		searchStateLiveData = "Error: bad query"
 		return
 	}
 
