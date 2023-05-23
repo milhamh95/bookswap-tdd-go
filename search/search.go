@@ -19,13 +19,13 @@ func (s Searcher) Search(query string) {
 		"another": "Another Item",
 	}
 
-	v, ok := availableQueries[query]
+	item, ok := availableQueries[query]
 	if !ok {
 		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
 		return
 	}
 
-	searchStateLiveData = v
+	searchStateLiveData = item
 }
 
 func (s Searcher) ResultState() SearchState {
