@@ -14,6 +14,10 @@ func (s Searcher) Search(query string) {
 		return
 	}
 
+	s.performSearch(query)
+}
+
+func (s Searcher) performSearch(query string) {
 	availableQueries := map[string]string{
 		"item":    "Item 1",
 		"another": "Another Item",
@@ -22,7 +26,6 @@ func (s Searcher) Search(query string) {
 	item, ok := availableQueries[query]
 	if !ok {
 		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
-		return
 	}
 
 	searchStateLiveData = item
