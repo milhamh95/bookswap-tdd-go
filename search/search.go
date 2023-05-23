@@ -1,7 +1,5 @@
 package search
 
-import "fmt"
-
 type Searcher struct {
 	Validator  QueryValidator
 	Repository Repository
@@ -16,21 +14,6 @@ func (s Searcher) Search(query string) {
 	}
 
 	item := s.Repository.PerformSearch(query)
-	searchStateLiveData = item
-}
-
-func (s Searcher) performSearch(query string) {
-	availableQueries := map[string]string{
-		"item":    "Item 1",
-		"another": "Another Item",
-	}
-
-	item, ok := availableQueries[query]
-	if !ok {
-		searchStateLiveData = fmt.Sprintf("No match found for %s", query)
-		return
-	}
-
 	searchStateLiveData = item
 }
 
