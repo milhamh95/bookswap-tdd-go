@@ -31,9 +31,5 @@ func (r Repository) PerformSearch(query string) ([]string, error) {
 		return []string{}, fmt.Errorf("no match found for %s", query)
 	}
 
-	if len(result) > 1 {
-		return result, nil
-	}
-
 	return result, nil
 }
