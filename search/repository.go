@@ -5,17 +5,17 @@ import (
 )
 
 type Repository struct {
-	InMemorySearchService SearchService
+	searchService SearchService
 }
 
 func NewRepository(searchService SearchService) Repository {
 	return Repository{
-		InMemorySearchService: searchService,
+		searchService: searchService,
 	}
 }
 
 func (r Repository) PerformSearch(query string) ([]string, error) {
-	result, err := r.InMemorySearchService.FindMatches(query)
+	result, err := r.searchService.FindMatches(query)
 	if err != nil {
 		return []string{}, err
 	}
