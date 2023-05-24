@@ -1,5 +1,6 @@
 package search
 
 type SearchState struct {
-	Result string
+	Result []string
+	Error  error
 }

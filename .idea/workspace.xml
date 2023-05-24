@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7621a4f-1d85-4661-a0b1-4a5a316dc3bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/search/error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search_state.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search_state.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/search_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +80,8 @@
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/ilham&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -83,7 +89,7 @@
       <recent name="$PROJECT_DIR$/search" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search">
+  <component name="RunManager" selected="Go Test.TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search">
     <configuration name="TestSearch_FindOneMatchTest in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -94,6 +100,18 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestSearch_FindOneMatchTest\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bookswap-tdd-go" />
+      <working_directory value="$PROJECT_DIR$/search" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="bookswap-tdd-go/search" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qanother_match_found\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSearch_FindOneMatchTest/another_short_query in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -108,18 +126,6 @@
       <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qanother_short_query\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSearch_FindOneMatchTest/empty_query in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="bookswap-tdd-go" />
-      <working_directory value="$PROJECT_DIR$/search" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="bookswap-tdd-go/search" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qempty_query\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -132,7 +138,7 @@
       <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qno_match_found\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSearch_FindOneMatchTest/short_query in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
       <root_directory value="$PROJECT_DIR$" />
@@ -141,16 +147,16 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qshort_query\E$" />
+      <pattern value="^\QTestSearch_FindOneMatchTest\E$/^\Qsuccess_match_found\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/short_query in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/another_short_query in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/empty_query in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_FindOneMatchTest/no_match_found in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/another_match_found in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/another_short_query in bookswap-tdd-go/search" />
+        <item itemvalue="Go Test.TestSearch_FindOneMatchTest/success_match_found in bookswap-tdd-go/search" />
       </list>
     </recent_temporary>
   </component>

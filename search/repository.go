@@ -1,22 +1,35 @@
 package search
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Repository struct {
-	AvailableQueries map[string]string
+	AvailableQueries []string
 }
 
-func NewRepository(availableQueries map[string]string) Repository {
+func NewRepository(availableQueries []string) Repository {
 	return Repository{
 		AvailableQueries: availableQueries,
 	}
 }
 
-func (r Repository) PerformSearch(query string) string {
-	item, ok := r.AvailableQueries[query]
-	if !ok {
-		return fmt.Sprintf("No match found for %s", query)
+func (r Repository) PerformSearch(query string) ([]string, error) {
+	result := []string{}
+
+	for _, v := range r.AvailableQueries {
+		if strings.Contains(
+			strings.ToLower(v),
+			strings.ToLower(query),
+		) {
+			result = append(result, v)
+		}
 	}
 
-	return item
+	if len(result) == 0 {
+		return []string{}, fmt.Errorf("no match found for %s", query)
+	}
+
+	return result, nil
 }

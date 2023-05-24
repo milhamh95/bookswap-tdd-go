@@ -1,24 +1,25 @@
 package search
 
+import "fmt"
+
 type Searcher struct {
 	Validator  QueryValidator
 	Repository Repository
 }
 
-var searchStateLiveData = ""
+var searchStateLiveData = SearchState{}
 
 func (s Searcher) Search(query string) {
 	if !s.Validator.Validate(query) {
-		searchStateLiveData = "Error: bad query"
+		searchStateLiveData.Error = fmt.Errorf("error: bad query")
 		return
 	}
 
-	item := s.Repository.PerformSearch(query)
-	searchStateLiveData = item
+	results, err := s.Repository.PerformSearch(query)
+	searchStateLiveData.Result = results
+	searchStateLiveData.Error = err
 }
 
 func (s Searcher) ResultState() SearchState {
-	return SearchState{
-		Result: searchStateLiveData,
-	}
+	return searchStateLiveData
 }
