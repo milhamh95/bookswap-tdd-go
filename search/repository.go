@@ -8,14 +8,17 @@ type Repository struct {
 	InMemorySearchService SearchService
 }
 
-func NewRepository(inMemorySearchService InMemorySearchService) Repository {
+func NewRepository(searchService SearchService) Repository {
 	return Repository{
-		InMemorySearchService: inMemorySearchService,
+		InMemorySearchService: searchService,
 	}
 }
 
 func (r Repository) PerformSearch(query string) ([]string, error) {
-	result := r.InMemorySearchService.FindMatches(query)
+	result, err := r.InMemorySearchService.FindMatches(query)
+	if err != nil {
+		return []string{}, err
+	}
 
 	if len(result) == 0 {
 		return []string{}, fmt.Errorf("no match found for %s", query)
@@ -25,5 +28,5 @@ func (r Repository) PerformSearch(query string) ([]string, error) {
 }
 
 type SearchService interface {
-	FindMatches(query string) []string
+	FindMatches(query string) ([]string, error)
 }

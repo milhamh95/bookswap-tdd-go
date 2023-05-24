@@ -12,7 +12,7 @@ func NewInMemorySearchService(availableQueries []string) InMemorySearchService {
 	}
 }
 
-func (i InMemorySearchService) FindMatches(query string) []string {
+func (i InMemorySearchService) FindMatches(query string) ([]string, error) {
 	result := []string{}
 
 	for _, v := range i.AvailableQueries {
@@ -24,5 +24,5 @@ func (i InMemorySearchService) FindMatches(query string) []string {
 		}
 	}
 
-	return result
+	return result, nil
 }
