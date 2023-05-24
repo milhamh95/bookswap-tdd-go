@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7621a4f-1d85-4661-a0b1-4a5a316dc3bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/search/in_memory_search_service_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/in_memory_search_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/in_memory_search_service_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <recent name="$PROJECT_DIR$/search" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_InMemorySearchService in bookswap-tdd-go/search">
+  <component name="RunManager" selected="Go Test.Test_InMemorySearchService/return_matches in bookswap-tdd-go/search">
     <configuration name="TestSearch_ErrorSearch/offline in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -135,7 +134,7 @@
       <pattern value="^\QTest_InMemorySearchService\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go test bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_InMemorySearchService/return_matches in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
       <root_directory value="$PROJECT_DIR$" />
@@ -144,15 +143,16 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
+      <pattern value="^\QTest_InMemorySearchService\E$/^\Qreturn_matches\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_InMemorySearchService/return_matches in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_InMemorySearchService in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_ErrorSearch/offline in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_ExceptionalSearch in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_ExceptionalSearch/bad_search in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.go test bookswap-tdd-go/search" />
       </list>
     </recent_temporary>
   </component>

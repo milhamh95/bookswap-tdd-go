@@ -7,9 +7,20 @@ import (
 )
 
 func Test_InMemorySearchService(t *testing.T) {
-	availableQueries := []string{"Item1", "item 2"}
-	searchService := search.NewInMemorySearchService(availableQueries)
-	result, _ := searchService.FindMatches("block")
+	t.Run("return empty result", func(t *testing.T) {
+		availableQueries := []string{"Item1", "item 2"}
+		searchService := search.NewInMemorySearchService(availableQueries)
+		result, _ := searchService.FindMatches("block")
 
-	require.Equal(t, []string{}, result)
+		require.Equal(t, []string{}, result)
+	})
+
+	t.Run("return matches", func(t *testing.T) {
+		availableQueries := []string{"one", "item 1", "two", "Item 2", "else", "ITEM 3"}
+		searchService := search.NewInMemorySearchService(availableQueries)
+		result, _ := searchService.FindMatches("item")
+
+		expectedResult := []string{"item 1", "Item 2", "ITEM 3"}
+		require.Equal(t, expectedResult, result)
+	})
 }
