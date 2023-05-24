@@ -116,6 +116,13 @@ func TestSearch_FindNoMatches(t *testing.T) {
 	})
 }
 
+type OfflineSearchService struct {
+}
+
+func (u OfflineSearchService) FindMatches(query string) ([]string, error) {
+	return []string{}, errors.New("offline")
+}
+
 type UnavailableSearchService struct {
 }
 
@@ -123,7 +130,7 @@ func (u UnavailableSearchService) FindMatches(query string) ([]string, error) {
 	return []string{}, errors.New("bad search")
 }
 
-func TestSearch_ExceptionalSearch(t *testing.T) {
+func TestSearch_ErrorSearch(t *testing.T) {
 	t.Run("bad search", func(t *testing.T) {
 		minQueryLength := 3
 		unavailableSearchService := UnavailableSearchService{}
@@ -139,6 +146,26 @@ func TestSearch_ExceptionalSearch(t *testing.T) {
 		expectedResult := search.SearchState{
 			Result: []string{},
 			Error:  errors.New("bad search"),
+		}
+
+		require.Equal(t, expectedResult, searcher.ResultState())
+	})
+
+	t.Run("offline", func(t *testing.T) {
+		minQueryLength := 3
+		offlineSearchService := OfflineSearchService{}
+		searcher := search.Searcher{
+			Validator: search.QueryValidator{
+				MinQueryLength: minQueryLength,
+			},
+			Repository: search.NewRepository(offlineSearchService),
+		}
+
+		searcher.Search("irrelevant")
+
+		expectedResult := search.SearchState{
+			Result: []string{},
+			Error:  errors.New("offline"),
 		}
 
 		require.Equal(t, expectedResult, searcher.ResultState())
