@@ -5,7 +5,7 @@ import (
 )
 
 type Repository struct {
-	InMemorySearchService InMemorySearchService
+	InMemorySearchService SearchService
 }
 
 func NewRepository(inMemorySearchService InMemorySearchService) Repository {
@@ -22,4 +22,8 @@ func (r Repository) PerformSearch(query string) ([]string, error) {
 	}
 
 	return result, nil
+}
+
+type SearchService interface {
+	FindMatches(query string) []string
 }
