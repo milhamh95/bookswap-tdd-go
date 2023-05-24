@@ -2,18 +2,15 @@ package search
 
 import (
 	"fmt"
-	"strings"
 )
 
 type Repository struct {
-	AvailableQueries      []string
 	InMemorySearchService InMemorySearchService
 }
 
-func NewRepository(availableQueries []string) Repository {
+func NewRepository(inMemorySearchService InMemorySearchService) Repository {
 	return Repository{
-		AvailableQueries:      availableQueries,
-		InMemorySearchService: InMemorySearchService{AvailableQueries: availableQueries},
+		InMemorySearchService: inMemorySearchService,
 	}
 }
 
@@ -25,23 +22,4 @@ func (r Repository) PerformSearch(query string) ([]string, error) {
 	}
 
 	return result, nil
-}
-
-type InMemorySearchService struct {
-	AvailableQueries []string
-}
-
-func (i InMemorySearchService) FindMatches(query string) []string {
-	result := []string{}
-
-	for _, v := range i.AvailableQueries {
-		if strings.Contains(
-			strings.ToLower(v),
-			strings.ToLower(query),
-		) {
-			result = append(result, v)
-		}
-	}
-
-	return result
 }

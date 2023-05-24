@@ -10,11 +10,12 @@ import (
 func TestSearch_FindOneMatch(t *testing.T) {
 	minQueryLength := 3
 	availableQueries := []string{"Item 1", "Another Value"}
+	inMemorySearchService := search.NewInMemorySearchService(availableQueries)
 	searcher := search.Searcher{
 		Validator: search.QueryValidator{
 			MinQueryLength: minQueryLength,
 		},
-		Repository: search.NewRepository(availableQueries),
+		Repository: search.NewRepository(inMemorySearchService),
 	}
 
 	t.Run("success match found", func(t *testing.T) {
@@ -43,11 +44,12 @@ func TestSearch_FindMultipleMatches(t *testing.T) {
 	t.Run("multiple matches found", func(t *testing.T) {
 		minQueryLength := 2
 		availableQueries := []string{"item one", "else", "one", "one value", "other"}
+		inMemorySearchService := search.NewInMemorySearchService(availableQueries)
 		searcher := search.Searcher{
 			Validator: search.QueryValidator{
 				MinQueryLength: minQueryLength,
 			},
-			Repository: search.NewRepository(availableQueries),
+			Repository: search.NewRepository(inMemorySearchService),
 		}
 
 		searcher.Search("one")
@@ -62,11 +64,12 @@ func TestSearch_FindMultipleMatches(t *testing.T) {
 func TestSearch_FindNoMatches(t *testing.T) {
 	minQueryLength := 3
 	availableQueries := []string{"Item 1", "Another Value"}
+	inMemorySearchService := search.NewInMemorySearchService(availableQueries)
 	searcher := search.Searcher{
 		Validator: search.QueryValidator{
 			MinQueryLength: minQueryLength,
 		},
-		Repository: search.NewRepository(availableQueries),
+		Repository: search.NewRepository(inMemorySearchService),
 	}
 
 	t.Run("no match found", func(t *testing.T) {
