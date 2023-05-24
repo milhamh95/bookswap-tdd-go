@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestSearch_FindOneMatchTest(t *testing.T) {
+func TestSearch_FindOneMatch(t *testing.T) {
 	minQueryLength := 3
 	availableQueries := []string{"Item 1", "Another Value"}
 	searcher := search.Searcher{
@@ -75,6 +75,26 @@ func TestSearch_FindOneMatchTest(t *testing.T) {
 		expectedResult := search.SearchState{
 			Result: []string{},
 			Error:  errors.New("error: bad query"),
+		}
+
+		require.Equal(t, expectedResult, searcher.ResultState())
+	})
+}
+
+func TestSearch_FindMultipleMatches(t *testing.T) {
+	t.Run("multiple matches found", func(t *testing.T) {
+		minQueryLength := 2
+		availableQueries := []string{"item one", "else", "one", "one value", "other"}
+		searcher := search.Searcher{
+			Validator: search.QueryValidator{
+				MinQueryLength: minQueryLength,
+			},
+			Repository: search.NewRepository(availableQueries),
+		}
+
+		searcher.Search("one")
+		expectedResult := search.SearchState{
+			Result: []string{"item one", "one", "one value"},
 		}
 
 		require.Equal(t, expectedResult, searcher.ResultState())
