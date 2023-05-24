@@ -131,8 +131,9 @@ func (u UnavailableSearchService) FindMatches(query string) ([]string, error) {
 }
 
 func TestSearch_ErrorSearch(t *testing.T) {
+	minQueryLength := 3
 	t.Run("bad search", func(t *testing.T) {
-		minQueryLength := 3
+
 		unavailableSearchService := UnavailableSearchService{}
 		searcher := search.Searcher{
 			Validator: search.QueryValidator{
@@ -152,7 +153,6 @@ func TestSearch_ErrorSearch(t *testing.T) {
 	})
 
 	t.Run("offline", func(t *testing.T) {
-		minQueryLength := 3
 		offlineSearchService := OfflineSearchService{}
 		searcher := search.Searcher{
 			Validator: search.QueryValidator{
