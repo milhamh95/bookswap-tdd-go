@@ -85,7 +85,7 @@
       <recent name="$PROJECT_DIR$/search" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_InMemorySearchService/return_matches in bookswap-tdd-go/search">
+  <component name="RunManager" selected="Go Test.Test_InMemorySearchService/return_bad_search in bookswap-tdd-go/search">
     <configuration name="TestSearch_ErrorSearch/offline in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -110,18 +110,6 @@
       <pattern value="^\QTestSearch_ExceptionalSearch\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSearch_ExceptionalSearch/bad_search in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="bookswap-tdd-go" />
-      <working_directory value="$PROJECT_DIR$/search" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="bookswap-tdd-go/search" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSearch_ExceptionalSearch\E$/^\Qbad_search\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="Test_InMemorySearchService in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -132,6 +120,18 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTest_InMemorySearchService\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_InMemorySearchService/return_bad_search in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bookswap-tdd-go" />
+      <working_directory value="$PROJECT_DIR$/search" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="bookswap-tdd-go/search" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_InMemorySearchService\E$/^\Qreturn_bad_search\E$" />
       <method v="2" />
     </configuration>
     <configuration name="Test_InMemorySearchService/return_matches in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -148,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_InMemorySearchService/return_bad_search in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_InMemorySearchService/return_matches in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_InMemorySearchService in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_ErrorSearch/offline in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.TestSearch_ExceptionalSearch in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.TestSearch_ExceptionalSearch/bad_search in bookswap-tdd-go/search" />
       </list>
     </recent_temporary>
   </component>

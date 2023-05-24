@@ -2,6 +2,7 @@ package search_test
 
 import (
 	"bookswap-tdd-go/search"
+	"errors"
 	"github.com/stretchr/testify/require"
 	"testing"
 )
@@ -22,5 +23,13 @@ func Test_InMemorySearchService(t *testing.T) {
 
 		expectedResult := []string{"item 1", "Item 2", "ITEM 3"}
 		require.Equal(t, expectedResult, result)
+	})
+
+	t.Run("return bad search", func(t *testing.T) {
+		searchService := search.NewInMemorySearchService([]string{"item 1", "item 2"})
+
+		_, err := searchService.FindMatches("")
+		expectedError := errors.New("bad search")
+		require.EqualError(t, expectedError, err.Error())
 	})
 }

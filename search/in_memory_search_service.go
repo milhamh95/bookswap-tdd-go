@@ -1,6 +1,9 @@
 package search
 
-import "strings"
+import (
+	"errors"
+	"strings"
+)
 
 type InMemorySearchService struct {
 	AvailableQueries []string
@@ -13,6 +16,10 @@ func NewInMemorySearchService(availableQueries []string) InMemorySearchService {
 }
 
 func (i InMemorySearchService) FindMatches(query string) ([]string, error) {
+	if query == "" {
+		return []string{}, errors.New("bad search")
+	}
+
 	result := []string{}
 
 	for _, v := range i.AvailableQueries {
