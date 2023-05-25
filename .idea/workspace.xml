@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7621a4f-1d85-4661-a0b1-4a5a316dc3bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/search/remote_search_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/remote_search_service_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/search_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d802003d57c598a8bcfad600e66c5fdf9761eda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90a6ca7360a27fa48482828599e96051190992f4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/d/0d802003d57c598a8bcfad600e66c5fdf9761eda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/0/90a6ca7360a27fa48482828599e96051190992f4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/remote_search_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/remote_search_service_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,19 +93,7 @@
       <recent name="$PROJECT_DIR$/search" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_RemoteSearchService/return_empty_result in bookswap-tdd-go/search">
-    <configuration name="Test_InMemorySearchService in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="bookswap-tdd-go" />
-      <working_directory value="$PROJECT_DIR$/search" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="bookswap-tdd-go/search" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTest_InMemorySearchService\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.Test_RemoteSearchService/offline in bookswap-tdd-go/search">
     <configuration name="Test_InMemorySearchService/return_bad_search in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -139,6 +130,18 @@
       <pattern value="^\QTest_RemoteSearchService\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="Test_RemoteSearchService/offline in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bookswap-tdd-go" />
+      <working_directory value="$PROJECT_DIR$/search" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="bookswap-tdd-go/search" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_RemoteSearchService\E$/^\Qoffline\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Test_RemoteSearchService/return_empty_result in bookswap-tdd-go/search" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="bookswap-tdd-go" />
       <working_directory value="$PROJECT_DIR$/search" />
@@ -153,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_RemoteSearchService/offline in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_RemoteSearchService/return_empty_result in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_RemoteSearchService in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_InMemorySearchService/return_bad_search in bookswap-tdd-go/search" />
         <item itemvalue="Go Test.Test_InMemorySearchService/return_matches in bookswap-tdd-go/search" />
-        <item itemvalue="Go Test.Test_InMemorySearchService in bookswap-tdd-go/search" />
       </list>
     </recent_temporary>
   </component>

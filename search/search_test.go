@@ -127,7 +127,7 @@ type UnavailableSearchService struct {
 }
 
 func (u UnavailableSearchService) FindMatches(query string) ([]string, error) {
-	return []string{}, errors.New("bad search")
+	return []string{}, errors.New("search service is unavailable")
 }
 
 func TestSearch_ErrorSearch(t *testing.T) {
@@ -146,7 +146,7 @@ func TestSearch_ErrorSearch(t *testing.T) {
 
 		expectedResult := search.SearchState{
 			Result: []string{},
-			Error:  errors.New("bad search"),
+			Error:  errors.New("search service is unavailable"),
 		}
 
 		require.Equal(t, expectedResult, searcher.ResultState())
